@@ -42,7 +42,7 @@
    ![최고관리자 모델 설정](http://static.toastoven.net/prod_iap/console_google/google_iap_console_supervisor.png)
 
 
-2. [최고관리자 모델 설정](https://console.cloud.google.com/apis/dashboard) API 및 서비스 페이지로 이동
+2. [Google Cloud Console API 및 서비스](https://console.cloud.google.com/apis/dashboard) 대시보드로 이동
     - Google Play 관리 계정과 연동할 프로젝트 선택
     - 사용자 인증 정보 메뉴로 이동
     - 사용자 인증 정보 만들기 > OAuth 클라이언트 ID 선택  
