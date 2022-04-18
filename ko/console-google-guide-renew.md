@@ -26,10 +26,13 @@
 
 ![NHN Cloud IAP 앱 설정](http://static.toastoven.net/prod_iap/console_google/google_iap_console.png)
 
-- 구글 연동을 위해서는 구글의 안드로이드 개발자 API 접근을 위한 인증이 필요합니다. <br/>
-- NHN Cloud IAP 는 두가지 인증 모델을 제공하며, 두 인증 모델들은 각기 인증을 위해 각기 다른 특화 정보들이 필요합니다. <br/>
-- 모델 별 특화 정보 외 공통적으로 필요한 정보도 구글 연동 및 결제 확인을 위해 필요하므로, **공통 입력 정보도 함께 확인**을 부탁 드립니다. <br/>
-- 모델 특화 / 공통 필요 정보들은 구글이 제공하는 [Google Cloud Platform Console](https://console.cloud.google.com/apis/dashboard), [Google Play Console](https://play.google.com/console/developers), [Google Developer Console](https://developers.google.com/oauthplayground/) 등을 통해 얻을 수 있습니다. <br/>
+- 구글 연동을 위해서는 구글의 안드로이드 개발자 API 접근을 위한 인증이 필요합니다. 
+- NHN Cloud IAP 는 두가지 인증 모델을 제공하며, 두 인증 모델들은 각기 인증을 위해 각기 다른 특화 정보들이 필요합니다. 
+- 모델 별 특화 정보 외 공통적으로 필요한 정보도 구글 연동 및 결제 확인을 위해 필요하므로, **공통 입력 정보도 함께 확인**을 부탁 드립니다.
+  - `Store App ID` : 공통 입력 정보 가이드 Package Name 참조
+  - `Google In App Purchase License Key` : 공통 입력 정보 가이드 InAppPurchase License Public Key 참조
+  - `마켓 연동 검증 생략` : 공통 입력 정보 가이드 마켓 검증 생략 참조 
+- 모델 특화 / 공통 필요 정보들은 구글이 제공하는 아래 가이드 단계들를 따라가며 [Google Cloud Platform Console](https://console.cloud.google.com/apis/dashboard), [Google Play Console](https://play.google.com/console/developers), [Google Developer Console](https://developers.google.com/oauthplayground/) 등을 통해 얻을 수 있습니다. 
 - Google Play 앱의 결제 정보를 확인하기 위한 [Google Android Publisher API](https://developers.google.com/android-publisher) 는 OAuth2 필수 인증 대상 API 입니다.  
 
 
@@ -127,19 +130,18 @@
     ![서비스계정 모델 설정](http://static.toastoven.net/prod_iap/console_google/google_service_account_step_04.png)
 
 
-# 공통 입력 값
-
-### Package Name
+# 공통 입력 정보
+## Package Name
 - Google Play Console 을 통해 등록한 앱을 빌드 시 지정한 packageName 이 있습니다. 이 값은 구글 내에서 앱의 고유 지정자로 활용됩니다.
 - 이 값을 NHN Cloud IAP 앱 설정의 `Store App ID` 로 입력합니다.
 
-### InAppPurchase License Public Key
+## InAppPurchase License Public Key
 - Google Play Console > 해당 앱 대시보드 > 수입 창출 메뉴 진입
 - 화면 하단에 Base64 인코딩된 라이센스 공개 키가 표기됩니다. 이 값을 NHN Cloud IAP 앱 설정의 `Google In App Purchase License Key` 로 입력합니다.
 
 ![IAP 라이센스 키](http://static.toastoven.net/prod_iap/console_google/google_iap_license_key.png)
 
-### 마켓 검증 생략
+## 마켓 검증 생략
 - NHN Cloud IAP 가 제공하는 구글 결제의 검증은 크게 두 단계로 나뉩니다. 두 단계 중 2단계의 생략 여부를 설정합니다.
 - 생략은 권장 사양이 아니며, 간혹 발생하는 구글 서버 장애 상황에 대응하는 일시적인 결제 승인 상태를 유지할 수 있습니다. (기본 값은 `NO`)
   - 생략을 하더라도 유입되는 결제 검증 요청이 무조건 정상 결제로 처리되는 것은 아닙니다.
