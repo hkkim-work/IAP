@@ -39,6 +39,9 @@
 - 다음 안내되는 스탭들을 따라가며 총 3가지의 정보들을 확인하여 NHN Cloud IAP 의 앱 정보로 입력해야 하며, 이 정보들은 해당 구글 계정의 OAuth 인증에 사용됩니다.
 
 1. NHN Cloud IAP 구글 최고 관리자 인증 모델 특화 입력 정보
+   - `Google API Client ID` : 최고관리자 인증모델 가이드 4단계 참조
+   - `Google API Client Secret` : 최고관리자 인증모델 가이드 4단계 참조
+   - `Refresh Token For Google Oauth` : 최고관리자 인증모델 가이드 6단계 참조
    ![최고관리자 모델 설정](http://static.toastoven.net/prod_iap/console_google/google_iap_console_supervisor.png)
 
 
@@ -86,6 +89,7 @@
 - 최고 관리자 인증 모델이 가지는 권한의 범위에 대한 부담을 느끼신다면, 구글 콘솔 내에서 서비스 계정 생성 후 이 인증 모델을 사용하시면 됩니다. ([구글 가이드](https://developers.google.com/identity/protocols/oauth2/service-account))
 
 1. NHN Cloud IAP 서비스 계정 인증 모델 특화 입력 정보
+   - `서비스 계정 연동 정보` : 서비스 계정 인증 모델 가이드 5단계 참조   
    ![서비스계정 모델 설정](http://static.toastoven.net/prod_iap/console_google/google_service_account_step_01.png)
 
 2. [Google Cloud Console](https://console.cloud.google.com/apis/dashboard) API 및 서비스 페이지로 이동
