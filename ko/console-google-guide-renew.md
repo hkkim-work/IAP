@@ -26,10 +26,11 @@
 
 ![NHN Cloud IAP 앱 설정](http://static.toastoven.net/prod_iap/console_google/google_iap_console.png)
 
-구글 연동을 위해서는 구글의 안드로이드 개발자 API 접근을 위한 인증이 필요합니다. <br/>
-NHN Cloud IAP 는 두가지 인증 모델을 제공하며, 두 인증 모델들은 각기 인증을 위해 각기 다른 특화 정보들이 필요합니다. <br/>
-모델 별 특화 정보 외 공통적으로 필요한 정보도 구글 연동 및 결제 확인을 위해 필요하므로, **공통 입력 정보도 함께 확인**을 부탁 드립니다. <br/>
-모델 특화 / 공통 필요 정보들은 구글이 제공하는 [Google Cloud Platform Console](https://console.cloud.google.com/apis/dashboard), [Google Play Console](https://play.google.com/console/developers), [Google Developer Console](https://developers.google.com/oauthplayground/) 등을 통해 얻을 수 있습니다. <br/>
+- 구글 연동을 위해서는 구글의 안드로이드 개발자 API 접근을 위한 인증이 필요합니다. <br/>
+- NHN Cloud IAP 는 두가지 인증 모델을 제공하며, 두 인증 모델들은 각기 인증을 위해 각기 다른 특화 정보들이 필요합니다. <br/>
+- 모델 별 특화 정보 외 공통적으로 필요한 정보도 구글 연동 및 결제 확인을 위해 필요하므로, **공통 입력 정보도 함께 확인**을 부탁 드립니다. <br/>
+- 모델 특화 / 공통 필요 정보들은 구글이 제공하는 [Google Cloud Platform Console](https://console.cloud.google.com/apis/dashboard), [Google Play Console](https://play.google.com/console/developers), [Google Developer Console](https://developers.google.com/oauthplayground/) 등을 통해 얻을 수 있습니다. <br/>
+- Google Play 앱의 결제 정보를 확인하기 위한 [Google Android Publisher API](https://developers.google.com/android-publisher) 는 OAuth2 필수 인증 대상 API 입니다.  
 
 
 # 최고 관리자 (Supervisor) 인증 모델
@@ -82,7 +83,7 @@ NHN Cloud IAP 는 두가지 인증 모델을 제공하며, 두 인증 모델들�
 - 권한 범위를 위임받는 서비스 계정의 생성 및 관리는 최고 관리자 (구글의 실제 관리 계정) 가 구글 콘솔에서 수행해야 합니다.
 - 서비스 계정은 최고 관리자에 의해 최고 관리자에 준하는 범위의 권한을 위임받을 수도 있고, 최고 관리자가 권한을 가진 특정 앱만으로 한정된 범위의 권한을 위임받을 수도 있습니다.
   - 위임 권한 범위에 대한 설정 전략은 고객의 의도 특성에 맞게 설정하시면 됩니다.
-- 최고 관리자 인증 모델이 가지는 권한의 범위에 대한 부담을 느끼신다면, 구글 콘솔 내에서 서비스 계정 생성 후 이 인증 모델을 사용하시면 됩니다.
+- 최고 관리자 인증 모델이 가지는 권한의 범위에 대한 부담을 느끼신다면, 구글 콘솔 내에서 서비스 계정 생성 후 이 인증 모델을 사용하시면 됩니다. ([구글 가이드](https://developers.google.com/identity/protocols/oauth2/service-account))
 
 1. NHN Cloud IAP 서비스 계정 인증 모델 특화 입력 정보
    ![서비스계정 모델 설정](http://static.toastoven.net/prod_iap/console_google/google_service_account_step_01.png)
