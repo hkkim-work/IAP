@@ -17,7 +17,7 @@
 
 ![구글 클라우드 프로젝트 연결](http://static.toastoven.net/prod_iap/console_google/google_common_step_01.png)
 - 신규 프로젝트 생성 후 연동 인증 설정을 위해선 OAuth 동의 화면 설정 등이 필요합니다.
-   - OAuth 동의 화면 설정 관련 자세한 내용은 화면 내 가이드 및 [구글이 제공하는 OAuth2 가이드](https://developers.google.com/identity/protocols/oauth2/) 를 참조 바랍니다.
+   - OAuth 동의 화면 설정 관련 자세한 내용은 화면 내 가이드 및 [구글이 제공하는 OAuth2 가이드](https://developers.google.com/identity/protocols/oauth2/)를 참조 바랍니다.
 
 ![구글 클라우드 프로젝트 연결](http://static.toastoven.net/prod_iap/console_google/google_common_step_02.png)
 
@@ -32,8 +32,8 @@
   - `Store App ID` : 공통 입력 정보 가이드 Package Name 참조
   - `Google In App Purchase License Key` : 공통 입력 정보 가이드 InAppPurchase License Public Key 참조
   - `마켓 연동 검증 생략` : 공통 입력 정보 가이드 마켓 검증 생략 참조 
-- 모델 특화 / 공통 필요 정보들은 구글이 제공하는 아래 가이드 단계들를 따라가며 [Google Cloud Platform Console](https://console.cloud.google.com/apis/dashboard), [Google Play Console](https://play.google.com/console/developers), [Google Developer Console](https://developers.google.com/oauthplayground/) 등을 통해 얻을 수 있습니다. 
-- Google Play 앱의 결제 정보를 확인하기 위한 [Google Android Publisher API](https://developers.google.com/android-publisher) 는 OAuth2 필수 인증 대상 API 입니다.  
+- 모델 특화 / 공통 필요 정보들은 구글이 제공하는 아래 가이드 단계들를 따라가며 [Google Cloud Platform Console](https://console.cloud.google.com/apis/dashboard), [Google Play Console](https://play.google.com/console/developers), [Google Developer Console](https://developers.google.com/oauthplayground/)등을 통해 얻을 수 있습니다. 
+- Google Play 앱의 결제 정보를 확인하기 위한 [Google Android Publisher API](https://developers.google.com/android-publisher)는 OAuth2 필수 인증 대상 API 입니다.  
 
 
 # 최고 관리자 (Supervisor) 인증 모델
@@ -86,7 +86,7 @@
 
 # 서비스 계정 인증 모델
 - 최고 관리자 계정이 위임한 권한을 가지는 구글 내 서비스 계정의 인증을 대행하는 모델이며, 2022년 4월 NHN Cloud IAP 에 신규 추가된 인증 지원 모델입니다.
-- 권한 범위를 위임받는 서비스 계정의 생성 및 관리는 최고 관리자 (구글의 실제 관리 계정) 가 구글 콘솔에서 수행해야 합니다.
+- 권한 범위를 위임받는 서비스 계정의 생성 및 관리는 최고 관리자(구글의 실제 관리 계정)가 구글 콘솔에서 수행해야 합니다.
 - 서비스 계정은 최고 관리자에 의해 최고 관리자에 준하는 범위의 권한을 위임받을 수도 있고, 최고 관리자가 권한을 가진 특정 앱만으로 한정된 범위의 권한을 위임받을 수도 있습니다.
   - 위임 권한 범위에 대한 설정 전략은 고객의 의도 특성에 맞게 설정하시면 됩니다.
 - 최고 관리자 인증 모델이 가지는 권한의 범위에 대한 부담을 느끼신다면, 구글 콘솔 내에서 서비스 계정 생성 후 이 인증 모델을 사용하시면 됩니다. ([구글 가이드](https://developers.google.com/identity/protocols/oauth2/service-account))
@@ -121,7 +121,7 @@
 
 5. API 및 서비스 페이지의 새로 생성된 서비스 계정 목록 중 생성한 서비스 계정의 세부 정보 화면으로 이동
    - 키 탭으로 이동 후 키 추가 > 새 키 만들기
-   - 신규 팝업에서 (`JSON` 형식) 선택 후 만들기 클릭
+   - 신규 팝업에서 `JSON` 형식 선택 후 만들기 클릭
    - 키 만들기가 완료되면 자동으로 JSON 형식의 파일이 구글로부터 다운로드 됩니다.
    - 해당 파일을 윈도우 메모장과 같은 순수 텍스트 편집기로 불러내어 전체 내용을 복사 후 NHN Cloud IAP 앱 정보 설정 화면의 `서비스 계정 연동 정보` 에 입력해야 합니다.
    - 다운로드 받은 파일은 최초 다운로드 받은 후 다시 다운로드 받을 수 없으므로, 잘 보관하여 입력 하시길 바랍니다.
